@@ -5,7 +5,8 @@ This library provides some basic/advanced
 * [Context](https://developer.android.com/reference/android/content/Context) Everywhere: 
   Access context anywhere in the app.
 
-
+* Kotlin extentions: 
+ Useful and common Kotlin extentions.
 
 
 ## Installation
@@ -16,32 +17,32 @@ You can include the library in your project using [Jitpack](https://jitpack.io)
 * **Step 1.** Add the JitPack repository to your root build.gradle at the end of repositories:
 
 ```groovy
-    allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
+}
 ```
 
 * **Step 2.** Add the dependency:
 
 ```groovy
-	dependencies {
-		implementation 'com.github.oth-libs:AndroidUtils:0.0.1'
-	}
+dependencies {
+	implementation 'com.github.oth-libs:AndroidUtils:0.0.1'
+}
 ```
 
 ### Maven
 * **Step 1.** Add the JitPack repository to your build file:
 
 ```xml
-	<repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
+<repositories>
+	<repository>
+	    <id>jitpack.io</id>
+	    <url>https://jitpack.io</url>
+	</repository>
+</repositories>
 ```
 
 * **Step 2.** Add the dependency:
@@ -59,26 +60,26 @@ You can include the library in your project using [Jitpack](https://jitpack.io)
 * **Step 1.** Add the JitPack repository to your build.sbt at the end of resolvers:
 
 ```groovy
-    resolvers += "jitpack" at "https://jitpack.io"
+resolvers += "jitpack" at "https://jitpack.io"
 ```
 
 * **Step 2.** Add the dependency:
 
 ```xml
-	libraryDependencies += "com.github.oth-libs" % "AndroidUtils" % "0.0.1"
+libraryDependencies += "com.github.oth-libs" % "AndroidUtils" % "0.0.1"
 ```
 
 ### LEININGEN
 * **Step 1.** Add the JitPack repository to your project.clj at the end of repositories:
 
 ```groovy
-    :repositories [["jitpack" "https://jitpack.io"]]
+:repositories [["jitpack" "https://jitpack.io"]]
 ```
 
 * **Step 2.** Add the dependency:
 
 ```xml
-	:dependencies [[com.github.oth-libs/AndroidUtils "0.0.1"]]
+:dependencies [[com.github.oth-libs/AndroidUtils "0.0.1"]]
 ```
 
  
@@ -86,17 +87,19 @@ You can include the library in your project using [Jitpack](https://jitpack.io)
 To use all the library features, make ```com.oth.utils.UtilsApplication``` the main application name, or extend from it in case you need your own ```android.app.Application``` implementation.
 
 ```xml
-    <application
-        android:name="com.oth.utils.UtilsApplication"
-        ...
-    </application>
+<application
+    android:name="com.oth.utils.UtilsApplication"
+    <.../>
+</application>
 ```
 
-### Examples
+### Examples  
+*See the sample project for more details*
+
 * Context Everywhere: Access context anywhere using:
 
 ```kotlin
-	ContextHelper.context()
+ContextHelper.context()
 ```
   
 
