@@ -1,6 +1,7 @@
 package com.oth.utils
 
 import android.app.Application
+import com.orhanobut.hawk.Hawk
 import com.oth.utils.context.ContextComponent
 import com.oth.utils.context.ContextModule
 import com.oth.utils.context.DaggerContextComponent
@@ -18,6 +19,8 @@ class UtilsApplication : Application() {
         // init ContextComponent
         contextComponent = DaggerContextComponent.builder().contextModule(ContextModule(this)).build()
 
+        // init Hawk
+        Hawk.init(this).build()
     }
 
 

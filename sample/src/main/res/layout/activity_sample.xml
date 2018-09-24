@@ -4,11 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SampleActivity">
+    android:padding="20dp"
+    tools:context=".ContextActivity">
 
 
     <TextView
         android:id="@+id/tvPackage"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="package name" />
+
+
+    <Button
+        android:id="@+id/cache"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="try Cache" />
 </LinearLayout>

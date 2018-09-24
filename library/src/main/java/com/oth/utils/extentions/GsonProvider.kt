@@ -1,4 +1,4 @@
-package com.oth.utils.kotlinExtentions
+package com.oth.utils.extentions
 
 
 import com.google.gson.GsonBuilder

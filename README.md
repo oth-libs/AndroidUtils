@@ -1,12 +1,16 @@
 # AndroidUtis
 
-This library provides some basic/advanced 
+This library provides some basic/advanced Android utils:
 
 * [Context](https://developer.android.com/reference/android/content/Context) Everywhere: 
   Access context anywhere in the app.
 
 * Kotlin extentions: 
  Useful and common Kotlin extentions.
+ 
+* Gson integration
+ 
+* Cache
 
 
 ## Installation
@@ -48,11 +52,11 @@ dependencies {
 * **Step 2.** Add the dependency:
 
 ```xml
-	<dependency>
-	    <groupId>com.github.oth-libs</groupId>
-	    <artifactId>AndroidUtils</artifactId>
-	    <version>0.0.1</version>
-	</dependency>
+<dependency>
+    <groupId>com.github.oth-libs</groupId>
+    <artifactId>AndroidUtils</artifactId>
+    <version>0.0.1</version>
+</dependency>
 ```
 
 
@@ -100,6 +104,14 @@ To use all the library features, make ```com.oth.utils.UtilsApplication``` the m
 
 ```kotlin
 ContextHelper.context()
+```
+
+* Cache: Cache and read complex objects:
+
+```kotlin
+Hawk.put(DATA_KEY, obj)
+//
+val obj = Hawk.get<ComplexObject>(DATA_KEY, null)
 ```
   
 
